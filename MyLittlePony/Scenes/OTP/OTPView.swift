@@ -77,6 +77,7 @@ struct OTPView: View, Routeable {
             }
             .foregroundColor(.red)
             .font(.footnote)
+            .accessId(AccessibilityIdentifier.OTPView.otpError)
 
 
             MLPFriendsBanner()

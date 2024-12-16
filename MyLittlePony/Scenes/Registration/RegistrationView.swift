@@ -57,7 +57,7 @@ struct RegistrationView: View , Routeable {
                     .cornerRadius(12)
                     .shadow(color: Color.gray.opacity(0.4), radius: 5, x: 0, y: 3)
             }
-
+            .accessId(AccessibilityIdentifier.RegistrationView.registerButton)
             .padding(.horizontal, 30)
             .padding(.bottom, 20)
             .opacity(isButtonDisabled ? 0.5 : 1)
