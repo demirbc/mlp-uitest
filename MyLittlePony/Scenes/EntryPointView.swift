@@ -15,14 +15,7 @@ struct EntryPointView: View {
     var body: some View {
         if sessionmanager.isLoggedIn {
             RootNavigationStack {
-                VStack {
-                    Text("User Logged In")
-                        .accessibilityIdentifier("user-logged-in-label")
-                    if let loggedInAccount = sessionmanager.loggedInAccount {
-                        Text(loggedInAccount)
-                            .accessibilityIdentifier("logged-in-user-account")
-                    }
-                }
+                MLPListView()
             }
         } else {
             RootNavigationStack(navigationRouter: notLoggedInEntryViewRouter) {
@@ -33,8 +26,6 @@ struct EntryPointView: View {
         }
     }
 }
-
-
 
 #Preview {
     EntryPointView()
